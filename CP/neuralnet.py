@@ -69,7 +69,7 @@ def train(data: np.array, labels: np.array, num_epochs: int):
     # initialize the model and training stuff
     model = TorchModel(data.shape[1])
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
-    loss_f = nn.CrossEntropyLoss()
+    loss_f = nn.BCELoss()
 
     # for recording
     epoch_cache = []
